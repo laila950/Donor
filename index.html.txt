@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BloodLink - Find a Donor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">🩸 BloodLink</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#search">Find Donor</a>
+      <a href="#register">Register</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Save a Life. <span class="highlight">Donate Blood.</span></h1>
+      <p>Connect with blood donors near you in seconds. Every drop counts.</p>
+      <div class="hero-buttons">
+        <a href="#search" class="btn btn-primary">Find a Donor</a>
+        <a href="#register" class="btn btn-outline">Become a Donor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card">
+      <h3 id="totalDonors">0</h3>
+      <p>Registered Donors</p>
+    </div>
+    <div class="stat-card">
+      <h3>8</h3>
+      <p>Blood Types</p>
+    </div>
+    <div class="stat-card">
+      <h3>24/7</h3>
+      <p>Available</p>
+    </div>
+  </section>
+
+  <!-- SEARCH SECTION -->
+  <section id="search" class="section">
+    <h2 class="section-title">Find a Blood Donor</h2>
+    <div class="search-box">
+      <select id="bloodTypeFilter">
+        <option value="">All Blood Types</option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+      </select>
+      <input type="text" id="locationFilter" placeholder="Enter city or area..." />
+      <button class="btn btn-primary" onclick="searchDonors()">Search</button>
+    </div>
+    <div id="results" class="results-grid"></div>
+  </section>
+
+  <!-- REGISTER SECTION -->
+  <section id="register" class="section register-section">
+    <h2 class="section-title">Register as a Donor</h2>
+    <form id="donorForm" class="donor-form">
+      <div class="form-row">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="number" id="age" placeholder="Age" min="18" max="65" required />
+      </div>
+      <div class="form-row">
+        <select id="bloodType" required>
+          <option value="">Select Blood Type</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        <input type="tel" id="phone" placeholder="Phone Number" required />
+      </div>
+      <div class="form-row">
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="text" id="location" placeholder="City / Area" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Register Now</button>
+    </form>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">Why Donate Blood?</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="icon">❤️</div>
+        <h3>Save Lives</h3>
+        <p>One donation can save up to three lives.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">🏥</div>
+        <h3>Free Health Check</h3>
+        <p>Get a mini health checkup before donation.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">🤝</div>
+        <h3>Help Community</h3>
+        <p>Be a hero in your community's time of need.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 BloodLink. Made with ❤️ for humanity.</p>
+    <p>Emergency Helpline: <strong>1-800-BLOOD</strong></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
